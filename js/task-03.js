@@ -12,3 +12,15 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const list = document.querySelector('.gallery');
+let copy = '';
+images.forEach(img => {
+    copy = images
+        .map(
+            img => 
+                `<li class="gallery__item"><img class="gallery__img" src="${img.url}" width="520px" alt="${img.alt}"></li>`
+                ).join('');
+  
+});
+list.insertAdjacentHTML('afterbegin', copy);

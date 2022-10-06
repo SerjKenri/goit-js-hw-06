@@ -22,3 +22,25 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+.gallery {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.gallery__item {
+  display: flex;
+  width: auto;
+
+  border: solid 5px blue;
+  transition: border 0.5s 0s ease;
+
+}
+
+.gallery__item:focus,
+.gallery__item:hover {
+  border: solid 5px red;
+}
+
+.gallery__item:not(last-child) {
+  margin-left: 5px;
+}
