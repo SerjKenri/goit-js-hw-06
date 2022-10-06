@@ -9,13 +9,13 @@ const ingredients = [
 
 const tableEl = document.querySelector('#ingredients');
 
-const ceatedEl = ingredients.map((element) => {
+const liArray = [];
+
+ingredients.forEach(ingredient => {
   const item = document.createElement('li');
-  item.textContent = element;
-  item.classList.add('item');
-  tableEl.appendChild(item);
+  item.className = 'item';
+  item.textContent = ingredient;
+  liArray.push(item);
 })
 
-
-
-console.log(tableEl);
+tableEl.append(...liArray);

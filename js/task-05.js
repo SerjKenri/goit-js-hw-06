@@ -5,5 +5,5 @@ const contentEl = {
 const {inputEl, outputEl} = contentEl;
 
 inputEl.oninput = function () {
-    return inputEl.value ? outputEl.innerHTML = inputEl.value : outputEl.textContent;
+    return inputEl.value ? outputEl.innerHTML = inputEl.value : outputEl.textContent = 'Anonymous';
 }
